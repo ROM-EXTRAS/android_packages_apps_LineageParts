@@ -146,6 +146,9 @@
 
         <activity android:name=".gestures.KeyHandler" />
 
+        <activity android:name=".gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
         <!-- Profiles settings (System category) -->
         <activity-alias
             android:name=".profiles.ProfilesSettings"
