@@ -64,5 +64,8 @@
     <dimen name="trust_logo_width">-1px</dimen>
 
     <dimen name="package_list_padding_top">16dp</dimen>
+
+    <!-- Shortcut picker -->
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
 </resources>
 

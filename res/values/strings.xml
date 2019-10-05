@@ -691,6 +691,10 @@
     <!-- Burn in protection -->
     <string name="burnin_protection_title">Display burn-in protection</string>
     <string name="burnin_protection_summary">Periodically move items that are permanently shown on screen to avoid excessive screen wear in that area</string>
-</resources>
 
+    <!-- ShortcutPickHelper -->
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
 </resources>
