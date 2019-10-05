@@ -66,5 +66,8 @@
     <dimen name="package_list_padding_top">16dp</dimen>
 
     <dimen name="color_mode_preview_height">320dp</dimen>
+
+    <!-- Shortcut picker -->
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
 </resources>
 
