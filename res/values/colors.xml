@@ -34,4 +34,8 @@
     <color name="trust_status_good">#36B37E</color>
     <color name="trust_status_poor">#FFAB00</color>
     <color name="trust_status_bad">#FF5630</color>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@*android:color/accent_device_default_light</color>
+    <color name="gestures_setting_background_color">#ffffff</color>
 </resources>
