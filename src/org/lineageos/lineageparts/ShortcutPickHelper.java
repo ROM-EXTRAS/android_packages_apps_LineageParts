@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings;
+package org.lineageos.lineageparts;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -40,8 +40,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.android.settings.R;
-import com.android.settings.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import org.lineageos.lineageparts.R;
+import org.lineageos.lineageparts.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.gestureanywhere;
+package org.lineageos.lineageparts.gestureanywhere;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,7 +26,7 @@ import android.gesture.GestureOverlayView;
 import android.gesture.Gesture;
 import android.gesture.GestureLibrary;
 import android.widget.TextView;
-import com.android.settings.R;
+import org.lineageos.lineageparts.R;
 
 public class GestureAnywhereCreateGestureActivity extends Activity {
     private static final float LENGTH_THRESHOLD = 60.0f;
