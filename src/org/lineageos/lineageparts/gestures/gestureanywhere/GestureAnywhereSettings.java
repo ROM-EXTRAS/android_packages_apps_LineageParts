@@ -23,7 +23,6 @@ import android.os.UserHandle;
 import androidx.preference.ListPreference;
 import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.view.Gravity;
@@ -35,7 +34,7 @@ import com.lineageos.support.preferences.CustomSeekBarPreference;
 import org.lineageos.internal.logging.LineageMetricsLogger;
 
 public class GestureAnywhereSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener {
     private static final String TAG = "GestureAnywhereSettings";
 
     private static final String KEY_ENABLED = "gesture_anywhere_enabled";
@@ -151,7 +150,7 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
                 Settings.System.GESTURE_ANYWHERE_POSITION, value);
     }
 
-    @Override
+    //@Override
     public int getMetricsCategory() {
         return LineageMetricsLogger.GESTURE_ANYWHERE;
     }

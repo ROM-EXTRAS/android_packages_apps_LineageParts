@@ -43,7 +43,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
 import org.lineageos.lineageparts.R;
-import com.android.settings.ShortcutPickHelper;
+import org.lineageos.lineageparts.ShortcutPickHelper;
 
 import java.util.Map;
 import java.util.Collections;
