@@ -17,6 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
+    xmlns:lineageparts="http://schemas.android.com/apk/res/org.lineageos.lineageparts"
     android:key="gesture_anywhere"
     android:title="@string/gesture_anywhere_title" >
 
@@ -78,7 +79,7 @@
         android:defaultValue="4"
         android:max="64"
         android:min="4"
-        settings:units="px"
+        lineageparts:units="px"
         android:dependency="gesture_anywhere_enabled" />
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
@@ -87,7 +88,8 @@
         android:defaultValue="0"
         android:max="99"
         android:min="0"
-        settings:units="%"
+        lineageparts:units="%"
+	allowEditText="true"
         android:dependency="gesture_anywhere_enabled" />
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
@@ -96,7 +98,7 @@
         android:defaultValue="100"
         android:max="100"
         android:min="1"
-        settings:units="%"
+        lineageparts:units="%"
         android:dependency="gesture_anywhere_enabled" />
 
 </PreferenceScreen>
