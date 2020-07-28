@@ -146,6 +146,20 @@
 
         <activity android:name=".gestures.KeyHandler" />
 
+        <!-- Gesture Anywhere -->
+        <activity android:name="Settings$GestureAnywhereActivity"
+             android:label="@string/gesture_anywhere_title"
+             android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="org.lineageos.lineageparts.gestures.gestureanywhere.GestureAnywhereSettings" />
+        </activity>
+        <activity android:name=".gestures.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".gestures.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
         <!-- Profiles settings (System category) -->
         <activity-alias
             android:name=".profiles.ProfilesSettings"
