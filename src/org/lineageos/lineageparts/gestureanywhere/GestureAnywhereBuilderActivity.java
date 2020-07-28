@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.gestureanywhere;
+package org.lineageos.lineageparts.gestureanywhere;
 
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -42,8 +42,8 @@ import android.text.TextUtils;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
-import com.android.settings.R;
-import com.android.settings.ShortcutPickHelper;
+import org.lineageos.lineageparts.R;
+import org.lineageos.lineageparts.ShortcutPickHelper;
 
 import java.util.Map;
 import java.util.Collections;

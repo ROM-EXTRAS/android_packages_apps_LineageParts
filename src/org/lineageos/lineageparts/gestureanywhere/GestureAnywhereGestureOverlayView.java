@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.gestureanywhere;
+package org.lineageos.lineageparts.gestureanywhere;
 
 import android.content.Context;
 import android.gesture.GestureOverlayView;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.gestureanywhere;
+package org.lineageos.lineageparts.gestureanywhere;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -26,8 +26,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.view.Gravity;
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import org.lineageos.lineageparts.R;
+import org.lineageos.lineageparts.SettingsPreferenceFragment;
 
 import com.lineageos.support.preferences.CustomSeekBarPreference;
 
