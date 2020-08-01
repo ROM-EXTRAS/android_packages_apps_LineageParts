@@ -24,7 +24,6 @@ import androidx.preference.ListPreference;
 import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import android.provider.Settings;
 import android.view.Gravity;
 import org.lineageos.lineageparts.R;
 import org.lineageos.lineageparts.SettingsPreferenceFragment;
@@ -32,6 +31,8 @@ import org.lineageos.lineageparts.SettingsPreferenceFragment;
 import com.lineageos.support.preferences.CustomSeekBarPreference;
 
 import org.lineageos.internal.logging.LineageMetricsLogger;
+
+import lineageos.providers.LineageSettings;
 
 public class GestureAnywhereSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -59,30 +60,30 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
         addPreferencesFromResource(R.xml.gesture_anywhere);
 
         mEnabledPref = (SwitchPreference) findPreference(KEY_ENABLED);
-        mEnabledPref.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_ENABLED, 0) == 1));
+        mEnabledPref.setChecked((LineageSettings.System.getInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_ENABLED, 0) == 1));
         mEnabledPref.setOnPreferenceChangeListener(this);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         mPositionPref = (ListPreference) prefSet.findPreference(KEY_POSITION);
         mPositionPref.setOnPreferenceChangeListener(this);
-        int position = Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_POSITION, Gravity.LEFT);
+        int position = LineageSettings.System.getInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_POSITION, Gravity.LEFT);
                 mPositionPref.setValue(String.valueOf(position));
 
         mTriggerWidthPref = (CustomSeekBarPreference) findPreference(KEY_TRIGGER_WIDTH);
-        mTriggerWidthPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, 40));
+        mTriggerWidthPref.setValue(LineageSettings.System.getInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, 40));
         mTriggerWidthPref.setOnPreferenceChangeListener(this);
 
         mTriggerTopPref = (CustomSeekBarPreference) findPreference(KEY_TRIGGER_TOP);
-        mTriggerTopPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_TRIGGER_TOP, 0));
+        mTriggerTopPref.setValue(LineageSettings.System.getInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_TOP, 0));
         mTriggerTopPref.setOnPreferenceChangeListener(this);
 
         mTriggerBottomPref = (CustomSeekBarPreference) findPreference(KEY_TRIGGER_BOTTOM);
-        mTriggerBottomPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_TRIGGER_HEIGHT, 100));
+        mTriggerBottomPref.setValue(LineageSettings.System.getInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_HEIGHT, 100));
         mTriggerBottomPref.setOnPreferenceChangeListener(this);
 
         Preference pref = findPreference(KEY_GESTURES);
@@ -115,24 +116,24 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
             updatePositionSummary(position);
             return true;
         } else if (preference == mEnabledPref) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.GESTURE_ANYWHERE_ENABLED,
+            LineageSettings.System.putInt(getContentResolver(),
+                    LineageSettings.System.GESTURE_ANYWHERE_ENABLED,
                     ((Boolean) newValue).booleanValue() ? 1 : 0);
             return true;
         } else if (preference == mTriggerWidthPref) {
             int width = ((Integer)newValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, width);
+            LineageSettings.System.putInt(getContentResolver(),
+                    LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, width);
             return true;
         } else if (preference == mTriggerTopPref) {
             int top = ((Integer)newValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.GESTURE_ANYWHERE_TRIGGER_TOP, top);
+            LineageSettings.System.putInt(getContentResolver(),
+                    LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_TOP, top);
             return true;
         } else if (preference == mTriggerBottomPref) {
             int bottom = ((Integer)newValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.GESTURE_ANYWHERE_TRIGGER_HEIGHT, bottom);
+            LineageSettings.System.putInt(getContentResolver(),
+                    LineageSettings.System.GESTURE_ANYWHERE_TRIGGER_HEIGHT, bottom);
             return true;
         }
         return false;
@@ -146,8 +147,8 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
 
     private void updatePositionSummary(int value) {
         mPositionPref.setSummary(mPositionPref.getEntries()[mPositionPref.findIndexOfValue("" + value)]);
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_POSITION, value);
+        LineageSettings.System.putInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_POSITION, value);
     }
 
     //@Override
@@ -158,14 +159,14 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
     @Override
     public void onPause() {
         super.onPause();
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_SHOW_TRIGGER, 0);
+        LineageSettings.System.putInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_SHOW_TRIGGER, 0);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.GESTURE_ANYWHERE_SHOW_TRIGGER, 1);
+        LineageSettings.System.putInt(getContentResolver(),
+                LineageSettings.System.GESTURE_ANYWHERE_SHOW_TRIGGER, 1);
     }
 }
