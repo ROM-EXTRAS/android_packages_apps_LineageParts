@@ -15,9 +15,6 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
-    xmlns:lineageparts="http://schemas.android.com/apk/res/org.lineageos.lineageparts"
     android:key="gesture_anywhere"
     android:title="@string/gesture_anywhere_title" >
 
@@ -44,43 +41,14 @@
     <PreferenceCategory
         android:title="@string/trigger_category" />
 
-<!--
-    <com.lineageos.support.preferences.CustomSeekBarPreference
-        android:key="gesture_anywhere_trigger_width"
-        android:title="@string/trigger_width_title"
-        android:defaultValue="4"
-        android:max="64"
-        settings:min="4"
-        settings:units="px"
-        android:dependency="gesture_anywhere_enabled" />
-
-    <com.lineageos.support.preferences.CustomSeekBarPreference
-        android:key="gesture_anywhere_trigger_top"
-        android:title="@string/trigger_top_title"
-        android:defaultValue="0"
-        android:max="99"
-        settings:min="0"
-        settings:units="%"
-        android:dependency="gesture_anywhere_enabled" />
-
-    <com.lineageos.support.preferences.CustomSeekBarPreference
-        android:key="gesture_anywhere_trigger_bottom"
-        android:title="@string/trigger_bottom_title"
-        android:defaultValue="100"
-        android:max="100"
-        settings:min="1"
-        settings:units="%"
-        android:dependency="gesture_anywhere_enabled" />
--->
-
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_width"
         android:title="@string/trigger_width_title"
         android:defaultValue="4"
         android:max="64"
         android:min="4"
-        units="px"
-        android:dependency="gesture_anywhere_enabled" />
+        android:dependency="gesture_anywhere_enabled"
+        units="px" />
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_top"
@@ -88,9 +56,8 @@
         android:defaultValue="0"
         android:max="99"
         android:min="0"
-        units="%"
-	allowEditText="true"
-        android:dependency="gesture_anywhere_enabled" />
+        android:dependency="gesture_anywhere_enabled"
+	units="%" />
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_bottom"
@@ -98,7 +65,7 @@
         android:defaultValue="100"
         android:max="100"
         android:min="1"
-        units="%"
-        android:dependency="gesture_anywhere_enabled" />
+        android:dependency="gesture_anywhere_enabled"
+	units="%" />
 
 </PreferenceScreen>
