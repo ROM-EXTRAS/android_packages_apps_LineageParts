@@ -29,7 +29,7 @@ import android.view.Gravity;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.settings.preferences.CustomSeekBarPreference;
+import com.lineageos.support.preferences.CustomSeekBarPreference;
 
 import org.lineageos.internal.logging.LineageMetricsLogger;
 

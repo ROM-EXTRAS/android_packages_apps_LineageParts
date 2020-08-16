@@ -15,7 +15,6 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="gesture_anywhere"
     android:title="@string/gesture_anywhere_title" >
 
@@ -42,31 +41,31 @@
     <PreferenceCategory
         android:title="@string/trigger_category" />
 
-    <com.android.settings.preferences.CustomSeekBarPreference
+    <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_width"
         android:title="@string/trigger_width_title"
         android:defaultValue="4"
         android:max="64"
-        settings:min="4"
-        settings:units="px"
+        android:min="4"
+        units="px"
         android:dependency="gesture_anywhere_enabled" />
 
-    <com.android.settings.preferences.CustomSeekBarPreference
+    <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_top"
         android:title="@string/trigger_top_title"
         android:defaultValue="0"
         android:max="99"
-        settings:min="0"
-        settings:units="%"
+        android:min="0"
+        units="%"
         android:dependency="gesture_anywhere_enabled" />
 
-    <com.android.settings.preferences.CustomSeekBarPreference
+    <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_bottom"
         android:title="@string/trigger_bottom_title"
         android:defaultValue="100"
         android:max="100"
-        settings:min="1"
-        settings:units="%"
+        android:min="1"
+        units="%"
         android:dependency="gesture_anywhere_enabled" />
 
 </PreferenceScreen>
