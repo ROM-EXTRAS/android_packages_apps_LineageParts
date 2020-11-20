@@ -20,6 +20,7 @@
 
     <SwitchPreference
         android:key="gesture_anywhere_enabled"
+        android:icon="@drawable/gesture_anywhere_icon"
         android:title="@string/gesture_anywhere_enabled_title"
         android:summary="@string/gesture_anywhere_enabled_summary"
         android:defaultValue="false" />
@@ -27,6 +28,7 @@
     <ListPreference
         android:key="gesture_anywhere_position"
         android:persistent="false"
+        android:icon="@drawable/arrow_slider_icon"
         android:dialogTitle="@string/gesture_anywhere_position_title"
         android:title="@string/gesture_anywhere_position_title"
         android:entries="@array/gesture_anywhere_position_entries"
@@ -35,6 +37,7 @@
 
     <Preference
         android:key="gesture_anywhere_gestures"
+        android:icon="@drawable/circle_icon"
         android:title="@string/gesture_anywhere_gestures_title"
         android:summary="@string/gesture_anywhere_gestures_summary" />
 
@@ -43,6 +46,7 @@
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_width"
+        android:icon="@drawable/position_icon"
         android:title="@string/trigger_width_title"
         android:defaultValue="4"
         android:max="64"
@@ -52,6 +56,7 @@
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_top"
+        android:icon="@drawable/arrow_up_icon"
         android:title="@string/trigger_top_title"
         android:defaultValue="0"
         android:max="99"
@@ -61,6 +66,7 @@
 
     <com.lineageos.support.preferences.CustomSeekBarPreference
         android:key="gesture_anywhere_trigger_bottom"
+        android:icon="@drawable/arrow_down_icon"
         android:title="@string/trigger_bottom_title"
         android:defaultValue="100"
         android:max="100"
