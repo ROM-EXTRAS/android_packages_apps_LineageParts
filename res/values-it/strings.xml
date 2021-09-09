@@ -542,4 +542,12 @@
     <string name="sms_security_check_limit_summary">Le applicazioni possono inviare %s messaggi in 1 minuto prima di richiedere conferma</string>
     <string name="sms_security_check_limit_summary_none">Non è consentito alle app l\'invio di messaggi senza conferma</string>
     <string name="sms_security_check_limit_always_confirm">Conferma sempre</string>
+
+    <!-- QS rows and columns -->
+    <string name="qs_columns_rows_category_title">Righe e colonne tiles</string>
+    <string name="qs_rows_columns_title">Righe e colonne tiles</string>
+    <string name="qs_rows_portrait_title">Righe tiles in portrait</string>
+    <string name="qs_rows_landscape_title">Righe tiles in landscape</string>
+    <string name="qs_columns_portrait_title">Colonne tiles in portrait</string>
+    <string name="qs_columns_landscape_title">Colonne tiles landscape</string>
 </resources>
