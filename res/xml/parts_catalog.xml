@@ -95,4 +95,11 @@
           android:title="@string/trust_title"
           android:fragment="org.lineageos.lineageparts.trust.TrustPreferences"
           lineage:xmlRes="@xml/trust_preferences" />
+
+    <part android:key="gesture_anywhere"
+          android:fragment="org.lineageos.lineageparts.gestureanywhere.GestureAnywhereSettings"
+          android:title="@string/gesture_anywhere_title"
+          android:summary="@string/gesture_anywhere_summary"
+          android:icon="@drawable/gesture_anywhere_icon"
+          lineage:xmlRes="@xml/gesture_anywhere" />
 </parts-catalog>
