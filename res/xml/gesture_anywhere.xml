@@ -18,7 +18,7 @@
     android:key="gesture_anywhere"
     android:title="@string/gesture_anywhere_title" >
 
-    <SwitchPreference
+    <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="gesture_anywhere_enabled"
         android:icon="@drawable/gesture_anywhere_icon"
         android:title="@string/gesture_anywhere_enabled_title"
