@@ -32,6 +32,7 @@ import com.lineageos.support.preferences.CustomSeekBarPreference;
 
 import org.lineageos.internal.logging.LineageMetricsLogger;
 
+import lineageos.preference.LineageSystemSettingSwitchPreference;
 import lineageos.providers.LineageSettings;
 
 public class GestureAnywhereSettings extends SettingsPreferenceFragment implements
@@ -45,7 +46,7 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
     private static final String KEY_TRIGGER_TOP = "gesture_anywhere_trigger_top";
     private static final String KEY_TRIGGER_BOTTOM = "gesture_anywhere_trigger_bottom";
 
-    private SwitchPreference mEnabledPref;
+    private LineageSystemSettingSwitchPreference mEnabledPref;
     private ListPreference mPositionPref;
     private CustomSeekBarPreference mTriggerWidthPref;
     private CustomSeekBarPreference mTriggerTopPref;
@@ -59,7 +60,7 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
 
         addPreferencesFromResource(R.xml.gesture_anywhere);
 
-        mEnabledPref = (SwitchPreference) findPreference(KEY_ENABLED);
+        mEnabledPref = findPreference(KEY_ENABLED);
         mEnabledPref.setChecked((LineageSettings.System.getInt(getContentResolver(),
                 LineageSettings.System.GESTURE_ANYWHERE_ENABLED, 0) == 1));
         mEnabledPref.setOnPreferenceChangeListener(this);
