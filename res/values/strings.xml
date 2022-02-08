@@ -736,4 +736,13 @@
     <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+
+    <!-- Content description of the previous button to bring user to the previous preview page. -->
+    <string name="previous_page_content_description">Previous</string>
+
+    <!-- Content description of the next button to bring user to the next preview page. -->
+    <string name="next_page_content_description">Next</string>
+
+    <!-- Content description of preview pager in colors preview -->
+    <string name="colors_viewpager_content_description">Color preview</string>
 </resources>
