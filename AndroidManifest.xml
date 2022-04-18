@@ -130,7 +130,7 @@
 
         <activity android:name=".gestures.KeyHandler" />
 
-	<!-- Gesture Anywhere -->
+    <!-- Gesture Anywhere -->
         <activity-alias
             android:name=".gestureanywhere.GestureAnywhereSettings"
             android:label="@string/gesture_anywhere_title"
@@ -147,6 +147,9 @@
             <meta-data
                 android:name="com.android.settings.order"
                 android:value="-253" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/gesture_anywhere_icon" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/summary_empty" />
