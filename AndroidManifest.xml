@@ -145,6 +145,7 @@
     <!-- Gesture Anywhere -->
         <activity-alias
             android:name=".gestureanywhere.GestureAnywhereSettings"
+            android:exported="true"
             android:label="@string/gesture_anywhere_title"
             android:icon="@drawable/gesture_anywhere_icon"
             android:targetActivity="PartsActivity">
@@ -165,6 +166,9 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/gesture_anywhere_summary" />
+            <meta-data
+                android:name="com.android.settings.profile"
+                android:value="primary_profile_only" />
         </activity-alias>
         <activity android:name=".gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".gestureanywhere.GestureAnywhereCreateGestureActivity" />
