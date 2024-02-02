@@ -142,6 +142,18 @@
 
         <activity android:name=".gestures.KeyHandler" />
 
+        <!-- Rotation Settings -->
+        <activity-alias
+            android:name=".hardware.DisplayRotation"
+            android:exported="true"
+            android:targetActivity="PartsActivity">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <action android:name="org.lineageos.lineageparts.DISPLAY_ROTATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
     <!-- Gesture Anywhere -->
         <activity-alias
             android:name=".gestureanywhere.GestureAnywhereSettings"
