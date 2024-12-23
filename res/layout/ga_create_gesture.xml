@@ -14,17 +14,21 @@
      limitations under the License.
 -->
 
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/top_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,22 +48,31 @@
 
     </LinearLayout>
 
+
     <org.lineageos.lineageparts.gestureanywhere.GestureAnywhereGestureOverlayView
         android:id="@+id/gestures_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1.0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:gestureColor="@color/ga_gesture_color"
         android:gestureStrokeWidth="16.0"
-        android:gestureStrokeType="single" />
+        android:gestureStrokeType="single"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintBottom_toTopOf="@id/button_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/button_bar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/done"
+            style="@style/ButtonStyle"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -69,6 +82,7 @@
 
         <Button
             android:layout_width="0dip"
+            style="@style/ButtonStyle"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="cancelGesture"
@@ -76,4 +90,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
